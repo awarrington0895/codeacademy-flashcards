@@ -13,6 +13,8 @@ const quizzesSlice = createSlice({
   }
 });
 
+const { addQuiz } = quizzesSlice.actions;
+
 // Additional Action Creators
 const addNewQuiz = (payload) => (dispatch) => {
   dispatch(quizzesSlice.actions.addQuiz(payload));
@@ -23,8 +25,7 @@ const addNewQuiz = (payload) => (dispatch) => {
 const selectQuizzes = (state) => state?.quizzes?.quizzes;
 
 // Exports
-export const { addQuizz } = quizzesSlice.actions;
 
-export { selectQuizzes, addNewQuiz };
+export { selectQuizzes, addNewQuiz, addQuiz };
 
 export default quizzesSlice.reducer;
